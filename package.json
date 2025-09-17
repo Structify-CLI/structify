@@ -1,0 +1,13 @@
+{
+    "name": "structify",
+    "private": true,
+    "version": "0.1.0",
+    "workspaces": [
+        "packages/*",
+        "templates/*"
+    ],
+    "scripts": {
+        "build": "pnpm -r build",
+        "dev": "pnpm --filter @structify/cli dev"
+    }
+}
