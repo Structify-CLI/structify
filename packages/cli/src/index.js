@@ -1,16 +1,17 @@
 #!/usr/bin/env node
 
-import { Command } from "commander";
-import chalk from "chalk";
-import path from "path";
-import { runPrompts } from "./prompts.js";
-import { readManifest } from "../utils/manifest.js";
-import { detectPkgManager } from "../utils/pkgManager.js";
-import { fetchTemplate } from "../utils/template.js";
-import { copyLocalTemplate } from "../utils/localFallback.js";
-import { initGit } from "../utils/git.js";
-import { installDeps } from "../utils/install.js";
 import fs from "fs";
+import path from "path";
+import chalk from "chalk";
+import { Command } from "commander";
+
+import { initGit } from "./utils/git.js";
+import { installDeps } from "./utils/install.js";
+import { runPrompts } from "./commands/prompts.js";
+import { readManifest } from "./utils/manifest.js";
+import { fetchTemplate } from "./utils/template.js";
+import { detectPkgManager } from "./utils/pkgManager.js";
+import { copyLocalTemplate } from "./utils/localFallback.js";
 
 const program = new Command();
 
