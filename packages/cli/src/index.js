@@ -1,6 +1,8 @@
+#!/usr/bin/env node
+
 import { Command } from "commander";
-import { blue, green, yellow, red } from "kolorist";
-import inquirer from "inquirer";
+import chalk from "chalk";
+import { runPrompts } from "./prompts.js";
 import degit from "degit";
 import { execSync } from "child_process";
 import fs from "fs";
@@ -28,77 +30,69 @@ function detectPkgManager() {
     return "npm"; // default
 }
 
-program.name("structify").description("Structify - scaffold modern web projects (React/Next)").version("0.2.0");
+program.name("structify").description("Structify CLI - Bootstrap your project with the perfect structure 🚀").version("0.1.0");
 
 program
-    .command("init [project-name]")
-    .description("Initialize a new project")
-    .option("-t, --template <template>", "Choose template (react, next, ...)")
-    .action(async (name, options) => {
+    .command("create-app")
+    .description("Create a new project with Structify")
+    .action(async () => {
         const manifest = readManifest();
-        let projectName = name;
 
-        // Ask for project name if not provided
-        if (!projectName) {
-            const { pname } = await inquirer.prompt([{ type: "input", name: "pname", message: "Project name:", default: "my-app" }]);
-            projectName = pname;
-        }
+        // 1️⃣ Run prompts
+        const answers = await runPrompts();
+        const projectName = answers.projectName;
+        const framework = answers.framework; // react / next
+        const language = answers.language; // js / js-swc / ts / ts-swc
+        const structure = answers.structure; // feature / component / clean / atomic
 
-        // Ask for template if not provided
-        let template = options.template;
-        if (!template) {
-            const { tmpl } = await inquirer.prompt([
-                {
-                    type: "list",
-                    name: "tmpl",
-                    message: "Select a framework:",
-                    choices: Object.keys(manifest),
-                },
-            ]);
-            template = tmpl;
-        }
-
-        console.log(blue(`✨ Creating project: ${projectName}`));
-        console.log(green(`→ Template: ${template}`));
+        console.log(chalk.blue(`\n✨ Creating project: ${projectName}`));
+        console.log(chalk.green(`→ Framework: ${framework}`));
+        console.log(chalk.green(`→ Language: ${language}`));
+        console.log(chalk.green(`→ Structure: ${structure}\n`));
 
         const targetDir = path.resolve(process.cwd(), projectName);
 
-        // Try remote template first
-        const templateRepo = manifest[template];
-        if (templateRepo) {
-            console.log(blue(`⬇️  Fetching template from ${templateRepo}...`));
-            const emitter = degit(templateRepo, { cache: false, force: true, verbose: false });
-            try {
-                await emitter.clone(targetDir);
-                console.log(green("✅ Template downloaded (remote)"));
-            } catch (err) {
-                console.log(red("⚠️  Remote template failed — falling back to local template"));
-            }
+        // 2️⃣ Get template repo
+        const templateKey = `${framework}-${language}-${structure}`; // يمكن تظبط حسب naming convention
+        let templateRepo = manifest[templateKey] || manifest[framework]; // fallback to framework template
+
+        if (!templateRepo) {
+            console.error(chalk.red("❌ No template found for this combination."));
+            process.exit(1);
         }
 
-        // Fallback local
+        console.log(chalk.blue(`⬇️  Fetching template from ${templateRepo}...`));
+        const emitter = degit(templateRepo, { cache: false, force: true, verbose: false });
+        try {
+            await emitter.clone(targetDir);
+            console.log(chalk.green("✅ Template downloaded (remote)"));
+        } catch (err) {
+            console.log(chalk.red("⚠️  Remote template failed — falling back to local template"));
+        }
+
+        // 3️⃣ Fallback local
         if (!fs.existsSync(targetDir) || fs.readdirSync(targetDir).length === 0) {
-            const localFallback = path.join(repoRoot, "packages", "templates", template, "base");
+            const localFallback = path.join(repoRoot, "packages", "templates", framework, structure);
             if (fs.existsSync(localFallback)) {
-                console.log(blue("📁 Copying local fallback template..."));
+                console.log(chalk.blue("📁 Copying local fallback template..."));
                 fs.cpSync(localFallback, targetDir, { recursive: true });
-                console.log(green("✅ Local template copied"));
+                console.log(chalk.green("✅ Local template copied"));
             } else {
-                console.error(red("❌ No template found (remote failed and no local fallback)."));
+                console.error(chalk.red("❌ No template found (remote failed and no local fallback)."));
                 process.exit(1);
             }
         }
 
-        // Init git
-        console.log(blue("⚙️  Initializing git..."));
+        // 4️⃣ Initialize git
+        console.log(chalk.blue("⚙️  Initializing git..."));
         execSync("git init", { cwd: targetDir, stdio: "inherit" });
 
-        // Detect package manager
+        // 5️⃣ Install dependencies
         const pkgManager = detectPkgManager();
-        console.log(blue(`📦 Installing dependencies with ${pkgManager}...`));
+        console.log(chalk.blue(`📦 Installing dependencies with ${pkgManager}...`));
         execSync(`${pkgManager} install`, { cwd: targetDir, stdio: "inherit" });
 
-        console.log(green("🎉 Project ready!"));
+        console.log(chalk.green("🎉 Project ready!"));
         console.log(`Next steps:\n  cd ${projectName}\n  ${pkgManager} run dev\n`);
     });
 
