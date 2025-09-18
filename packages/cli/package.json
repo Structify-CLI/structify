@@ -1,7 +1,9 @@
 {
-    "name": "@structify/cli",
-    "version": "0.1.0",
-    "private": true,
+    "name": "@structify-cli/cli",
+    "description": "A CLI tool for structuring your project",
+    "author": "Mahmoud Saber & Ashraf Mohamed",
+    "license": "MIT",
+    "version": "1.0.1",
     "bin": {
         "structify": "./bin/index.js"
     },
@@ -15,5 +17,13 @@
         "degit": "^2.8.4",
         "inquirer": "^9.2.15",
         "chalk": "^5.6.2"
+    },
+    "files": [
+        "src",
+        "bin",
+        "README.md"
+    ],
+    "publishConfig": {
+        "access": "public"
     }
 }
