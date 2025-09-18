@@ -2,20 +2,29 @@
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+We release security updates only for the latest major version of Structify CLI.  
+Please make sure you are always using the most recent release.
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+| 1.x     | ✅                 |
+| < 1.0   | ❌                 |
+
+---
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+If you discover a security vulnerability in **Structify CLI**, please report it responsibly:
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+- Open a [security advisory](https://github.com/Structify-CLI/structify/security/advisories/new).  
+- Alternatively, you can contact the maintainers directly at: **[your-email-here]**.  
+
+### What to Expect
+
+- We will acknowledge receipt of your report within **48 hours**.  
+- Once validated, we will provide updates on the fix progress.  
+- A patched version will be released as soon as possible.  
+
+---
+
+🔒 Thanks for helping keep Structify CLI secure!
