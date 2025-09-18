@@ -3,7 +3,7 @@
     "description": "A CLI tool for structuring your project",
     "author": "Mahmoud Saber & Ashraf Mohamed",
     "license": "MIT",
-    "version": "1.0.3",
+    "version": "1.0.2",
     "bin": {
         "structify": "./bin/index.js"
     },
