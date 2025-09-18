@@ -10,17 +10,6 @@ It provides ready-to-use templates for popular frameworks like **React (Vite)** 
 
 ---
 
-## 🚀 Features
-
-- ⚡ **Fast project setup** — bootstrap a new app in seconds.
-- 🎯 **Framework choice** — React (Vite) and Next.js out of the box.
-- 📝 **TypeScript or JavaScript** — choose your preferred language.
-- 🛠 **Pre-configured tools** — ESLint, Prettier, TailwindCSS (optional), testing setup.
-- 🌐 **Remote templates** — always up-to-date via GitHub repositories.
-- 📦 **Future extensibility** — monorepo design for plugins, more frameworks, and advanced features.
-
----
-
 ## 📦 Installation
 
 You don’t need to install Structify globally. Just use `npx`:
@@ -74,16 +63,6 @@ my-app/
 ├── tsconfig.json
 └── vite.config.ts
 ```
-
----
-
-## 🔮 Roadmap
-
-- [ ] Add support for more frameworks (Remix, Astro, Angular).
-- [ ] Interactive CLI with prompts.
-- [ ] Plugin system for custom templates.
-- [ ] GitHub Actions / CI setup scaffolding.
-- [ ] Configurable state management (Redux, Zustand, etc.).
 
 ---
 
