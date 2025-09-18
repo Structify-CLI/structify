@@ -1,4 +1,5 @@
-name: Publish to npm2
+name: Publish to npm
+description: Publishes the CLI package to npm
 
 on:
     release:
