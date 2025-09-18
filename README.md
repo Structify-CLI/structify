@@ -1,7 +1,7 @@
 # 📖 Structify — Modern Project Scaffolding CLI
 
-[![npm version](https://img.shields.io/npm/v/structify?color=blue)](https://www.npmjs.com/package/structify)  
-[![npm downloads](https://img.shields.io/npm/dm/structify?color=green)](https://www.npmjs.com/package/structify)  
+[![npm version](https://img.shields.io/npm/v/@structify-cli/cli?color=blue)](https://www.npmjs.com/package/@structify-cli/cli)  
+[![npm downloads](https://img.shields.io/npm/dm/@structify-cli/cli?color=green)](https://www.npmjs.com/package/@structify-cli/cli)  
 [![license](https://img.shields.io/github/license/Structify-CLI/structify)](LICENSE)  
 [![build](https://img.shields.io/github/actions/workflow/status/Structify-CLI/structify/ci.yml?branch=main)](https://github.com/Structify-CLI/structify/actions)
 
@@ -26,14 +26,14 @@ It provides ready-to-use templates for popular frameworks like **React (Vite)** 
 You don’t need to install Structify globally. Just use `npx`:
 
 ```bash
-npx structify init my-app --template react --ts
+npx @structify-cli/cli create-app
 ```
 
 Or install globally:
 
 ```bash
-npm install -g structify
-structify init my-app --template next
+npm install -g @structify-cli/cli
+@structify-cli/cli create-app
 ```
 
 ---
@@ -56,8 +56,7 @@ npx structify init my-next-app --template next --ts
 
 | Flag             | Description                        | Default |
 | ---------------- | ---------------------------------- | ------- |
-| `--template, -t` | Choose template: `react` or `next` | react   |
-| `--ts`           | Enable TypeScript                  | false   |
+| `create-app`     | Choose template: `react` or `next` | react   |
 
 ---
 
