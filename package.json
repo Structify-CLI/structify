@@ -8,6 +8,7 @@
     ],
     "scripts": {
         "build": "pnpm -r build",
-        "dev": "pnpm --filter @structify/cli dev"
+        "dev": "pnpm --filter @structify/cli dev",
+        "release": "npm version patch && git push --follow-tags"
     }
 }
