@@ -33,23 +33,18 @@ Or install globally:
 
 ```bash
 npm install -g @structify-cli/cli
-@structify-cli/cli create-app
+structify create-app
 ```
 
 ---
 
 ## 🛠 Usage
 
-### Create a React (Vite) app
+### Create app
 
 ```bash
-npx structify init my-app --template react
-```
-
-### Create a Next.js app with TypeScript
-
-```bash
-npx structify init my-next-app --template next --ts
+npx @structify-cli/cli create-app
+structify  create-app
 ```
 
 ### Options
