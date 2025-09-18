@@ -2,8 +2,15 @@
     "name": "@structify-cli/cli",
     "description": "A CLI tool for structuring your project",
     "author": "Mahmoud Saber & Ashraf Mohamed",
+    "keywords": [
+        "structify",
+        "cli",
+        "typescript",
+        "template",
+        "generator"
+    ],
     "license": "MIT",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "bin": {
         "structify": "./bin/index.js"
     },
