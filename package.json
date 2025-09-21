@@ -1,7 +1,7 @@
 {
     "name": "structify",
     "private": true,
-    "version": "1.0.8",
+    "version": "1.0.9",
     "workspaces": [
         "packages/*",
         "templates/*"
