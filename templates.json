@@ -1,41 +1,13 @@
 {
-    "react-js-feature": "Structify-CLI/templates/react-js-feature",
+    "react-js-modules": "Structify-CLI/templates/react-js-modules",
     "react-js-component": "Structify-CLI/templates/react-js-component",
-    "react-js-clean": "Structify-CLI/templates/react-js-clean",
-    "react-js-atomic": "Structify-CLI/templates/react-js-atomic",
 
-    "react-js-swc-feature": "Structify-CLI/templates/react-js-swc-feature",
+    "react-js-swc-modules": "Structify-CLI/templates/react-js-swc-modules",
     "react-js-swc-component": "Structify-CLI/templates/react-js-swc-component",
-    "react-js-swc-clean": "Structify-CLI/templates/react-js-swc-clean",
-    "react-js-swc-atomic": "Structify-CLI/templates/react-js-swc-atomic",
 
-    "react-ts-feature": "Structify-CLI/templates/react-ts-feature",
+    "react-ts-modules": "Structify-CLI/templates/react-ts-modules",
     "react-ts-component": "Structify-CLI/templates/react-ts-component",
-    "react-ts-clean": "Structify-CLI/templates/react-ts-clean",
-    "react-ts-atomic": "Structify-CLI/templates/react-ts-atomic",
 
-    "react-ts-swc-feature": "Structify-CLI/templates/react-ts-swc-feature",
-    "react-ts-swc-component": "Structify-CLI/templates/react-ts-swc-component",
-    "react-ts-swc-clean": "Structify-CLI/templates/react-ts-swc-clean",
-    "react-ts-swc-atomic": "Structify-CLI/templates/react-ts-swc-atomic",
-
-    "next-js-feature": "Structify-CLI/templates/next-js-feature",
-    "next-js-component": "Structify-CLI/templates/next-js-component",
-    "next-js-clean": "Structify-CLI/templates/next-js-clean",
-    "next-js-atomic": "Structify-CLI/templates/next-js-atomic",
-
-    "next-js-swc-feature": "Structify-CLI/templates/next-js-swc-feature",
-    "next-js-swc-component": "Structify-CLI/templates/next-js-swc-component",
-    "next-js-swc-clean": "Structify-CLI/templates/next-js-swc-clean",
-    "next-js-swc-atomic": "Structify-CLI/templates/next-js-swc-atomic",
-
-    "next-ts-feature": "Structify-CLI/templates/next-ts-feature",
-    "next-ts-component": "Structify-CLI/templates/next-ts-component",
-    "next-ts-clean": "Structify-CLI/templates/next-ts-clean",
-    "next-ts-atomic": "Structify-CLI/templates/next-ts-atomic",
-
-    "next-ts-swc-feature": "Structify-CLI/templates/next-ts-swc-feature",
-    "next-ts-swc-component": "Structify-CLI/templates/next-ts-swc-component",
-    "next-ts-swc-clean": "Structify-CLI/templates/next-ts-swc-clean",
-    "next-ts-swc-atomic": "Structify-CLI/templates/next-ts-swc-atomic"
+    "react-ts-swc-modules": "Structify-CLI/templates/react-ts-swc-modules",
+    "react-ts-swc-component": "Structify-CLI/templates/react-ts-swc-component"
 }

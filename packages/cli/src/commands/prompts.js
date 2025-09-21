@@ -16,7 +16,7 @@ export async function runPrompts() {
             message: chalk.cyanBright("🚀 Choose your framework:"),
             choices: [
                 { name: chalk.yellow("React"), value: "react" },
-                { name: chalk.green("Next.js"), value: "next" },
+                // { name: chalk.green("Next.js"), value: "next" },
             ],
         },
         {
@@ -35,10 +35,8 @@ export async function runPrompts() {
             name: "structure",
             message: chalk.cyanBright("🏗️  Choose your project structure:"),
             choices: [
-                { name: chalk.green("Feature-structure"), value: "feature" },
-                { name: chalk.yellow("Component-based-structure"), value: "component" },
-                { name: chalk.cyan("Clean Architecture"), value: "clean" },
-                { name: chalk.magenta("Atomic Design"), value: "atomic" },
+                { name: chalk.green("Modules-structure"), value: "modules" },
+                { name: chalk.yellow("Component-pages-structure"), value: "component" },
             ],
         },
     ]);
