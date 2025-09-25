@@ -36,7 +36,7 @@ export async function runPrompts() {
             message: chalk.cyanBright("🏗️  Choose your project structure:"),
             choices: [
                 { name: chalk.green("Modules-structure"), value: "modules" },
-                { name: chalk.yellow("Component-pages-structure"), value: "component" },
+                { name: chalk.yellow("Component-pages-structure"), value: "pages-components" },
             ],
         },
     ]);
