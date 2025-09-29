@@ -2,6 +2,11 @@
     "name": "@structify-cli/cli",
     "description": "A CLI tool for structuring your project",
     "author": "Mahmoud Saber & Ashraf Mohamed",
+    "homepage": "https://stractify.vercel.app/",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Structify-CLI/structify.git"
+    },
     "keywords": [
         "structify",
         "cli",
@@ -10,7 +15,7 @@
         "generator"
     ],
     "license": "MIT",
-    "version": "1.0.4",
+    "version": "1.0.6",
     "bin": {
         "structify": "./bin/index.js"
     },
