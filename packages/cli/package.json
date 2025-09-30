@@ -24,11 +24,12 @@
         "dev": "node ./bin/index.js"
     },
     "dependencies": {
+        "chalk": "^5.6.2",
         "commander": "^12.0.0",
-        "kolorist": "^1.8.0",
         "degit": "^2.8.4",
+        "figlet": "^1.9.3",
         "inquirer": "^9.2.15",
-        "chalk": "^5.6.2"
+        "kolorist": "^1.8.0"
     },
     "files": [
         "src",

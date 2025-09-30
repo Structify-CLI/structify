@@ -1,13 +1,13 @@
 {
     "react-js-modules": "Structify-CLI/templates/react-js-modules",
-    "react-js-component": "Structify-CLI/templates/react-js-component",
+    "react-js-pages-components": "Structify-CLI/templates/react-js-pages-components",
 
     "react-js-swc-modules": "Structify-CLI/templates/react-js-swc-modules",
-    "react-js-swc-component": "Structify-CLI/templates/react-js-swc-component",
+    "react-js-swc-pages-components": "Structify-CLI/templates/react-js-swc-pages-components",
 
     "react-ts-modules": "Structify-CLI/templates/react-ts-modules",
-    "react-ts-component": "Structify-CLI/templates/react-ts-component",
+    "react-ts-pages-components": "Structify-CLI/templates/react-ts-pages-components",
 
     "react-ts-swc-modules": "Structify-CLI/templates/react-ts-swc-modules",
-    "react-ts-swc-component": "Structify-CLI/templates/react-ts-swc-component"
+    "react-ts-swc-pages-components": "Structify-CLI/templates/react-ts-swc-pages-components"
 }
